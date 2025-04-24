@@ -1,0 +1,52 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    gap:20px;
+    margin-left: 50px;
+}
+.text-reach {
+    font-family: 'Apercu Arabic Pro';
+    font-weight: 400;
+    font-size: 40px;
+  }
+  input {
+    width: 557px;
+    height: 93px;
+    border-radius: 10px;
+    border: 1px solid #DCDCDC;
+    padding-left: 30px;
+  }
+  .button-send {
+    width: 218px;
+    height: 73px;
+    background-color: #FAD34F;
+    border: none;
+    border-radius: 500px;
+    font-family: 'Apercu Arabic Pro';
+    font-weight: 400;
+    font-size: 18px;
+    color:white;
+  }
+  .yellow-cartoon{
+    width:88px;
+    height: 86px;
+    transform: rotate(-35deg);
+    animation-name: yellowCartoon;
+    animation-duration: 2.5s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  @keyframes yellowCartoon {
+    0% {
+        transform: rotate(-35deg);
+    }
+    50% {
+        transform: rotate(-20deg);
+      }
+    
+      100% {
+        transform: rotate(360deg);
+      }
+  }
