@@ -12,7 +12,7 @@ const Map = () => (
 <MapContainer
 center={[40.645, -73.880]} 
 zoom={14}
-style={{ width: '760px', height: '760px', borderRadius: '50%', overflow: 'hidden' }}
+style={{ width: '760px', height: '760px', borderRadius: '50%', overflow: 'hidden'}}
 scrollWheelZoom={false}
 className="map"
 >
