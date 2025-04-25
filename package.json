@@ -1,6 +1,7 @@
 {
   "name": "map-project",
   "version": "0.1.0",
+  "homepage": "https://sofiaputlyuk.github.io/map-project",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
