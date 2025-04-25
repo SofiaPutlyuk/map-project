@@ -1,0 +1,94 @@
+footer {
+    height: 100%;
+    border: 1px solid #D8D8D8;
+    background: #FAFAFA;
+    margin-top:20px;
+    display: flex;
+    justify-content: space-between;
+}
+.container-cartoon {
+    display: flex;
+    gap:40px;
+    height: 100%;
+}
+.green-cartoon {
+    width:79px;
+    height: 97px;
+}
+
+.container-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+    }
+.red-cartoon{
+    width:214px;
+    height: 208px;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    animation-name:  redCartoon;
+    transform: translateY(0%);
+    animation-duration: 1.75s;
+}
+@keyframes redCartoon {
+    0% {
+        transform: translateY(0%);
+      }
+    
+      50% {
+        transform: translateY(-5%);
+      }
+    
+      100% {
+        transform: translateY(-10%);
+      }
+}
+.yellow-cartoon {
+    margin-top: 50px;
+    width: 89px;
+    height: 86px;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    animation-name:  yellowCartoon;
+    transform: translateX(0%);
+    animation-duration: 1.75s;
+}
+@keyframes yellowCartoon {
+    0% {
+        transform: translateX(0%);
+      }
+    
+      50% {
+        transform: translateX(-15%);
+      }
+    
+      100% {
+        transform: translateX(0%);
+      }
+}
+.green-cartoon {
+    width:79px;
+    height: 97px;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    animation-name:  greenCartoon;
+    transform: translateY(0%);
+    animation-duration: 1.75s;
+}
+@keyframes greenCartoon {
+    0% {
+        transform: translateY(0%);
+      }
+    
+      50% {
+        transform: translateY(15%);
+      }
+    
+      100% {
+        transform: translateY(0%);
+      }
+}
