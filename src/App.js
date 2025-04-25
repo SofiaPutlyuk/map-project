@@ -1,12 +1,18 @@
 import './App.css';
 import Map from './components/Map';
 import Form from './components/Form';
+import Footer from './components/Footer';
+import { Fragment } from 'react';
 function App() {
   return (
-  <div className='container'>
-    <Form />
-<Map />
-</div>
+<Fragment>
+      <div className='container'>
+        <Form />
+        <Map />
+      </div>
+      <Footer />
+      </Fragment>
+  
   );
 }
 
