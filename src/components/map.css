@@ -5,13 +5,13 @@
     overflow: hidden;
     height: 760px;
     bottom: 100px;
-
+    width:1000px;
 }
 .map{
-    width: 700px;
-    height: 730px;
+    width: 900px;
+    height: 600px;
     z-index:1;
-    left:140px;
+    left:175px;
     position: relative;
 
 }
@@ -71,4 +71,53 @@
       100% {
         transform: rotate(360deg);
       }
+}
+.cloud-map {
+    position: absolute;
+    bottom: 30px;
+    width: 219px;
+    height: 165px;
+}
+.cloud-two{
+    width:139px;
+    height: 104px;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    animation-name:  cloudTwo;
+    transform: translateX(0%);
+    animation-duration: 1.75s;
+}
+.cloud-three {
+    width:172px;
+    position: relative;
+    top:50px;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    animation-name:  cloudThree;
+    transform: translateX(0%);
+    animation-duration: 1.75s;
+}
+@keyframes cloudTwo {
+0%{
+    transform: translateX(0%);
+}
+25% {
+    transform: translateX(10%);
+}
+50%{
+    transform: translateX(30%);
+}
+100%{
+    transform: translateX(40%);
+}
+}
+@keyframes cloudThree {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-10%);
+    }
 }

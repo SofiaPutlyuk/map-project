@@ -2,6 +2,7 @@ import React from 'react'
 import { Fragment } from 'react'
 import yellowCartoon from '../images/yellow-cartoon.png'
 import './form.css'
+import Toggle from './Toggle'
 class Form extends React.Component {
     state = {
         names: JSON.parse(localStorage.getItem("Name")) || [],
@@ -62,7 +63,10 @@ class Form extends React.Component {
         return (
             <Fragment>
             <form >
+            <div className='wrapper'>
             <img src={yellowCartoon} alt='yellow-cartoon' className='yellow-cartoon'/>
+            <Toggle />
+            </div>
             <p className='text-reach'>Reach out to us!</p>
                 <input type='text' placeholder='Your name*' onChange={this.handleName} value={nameValue} />
                 <input type='email' placeholder='Your e-mail*' onChange={this.handleEmail} value={emailValue}/>
