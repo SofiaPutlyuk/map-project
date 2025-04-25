@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import { Fragment } from 'react';
 function App() {
   return (
-<Fragment>
+     <Fragment>
       <div className='container'>
         <Form />
         <Map />

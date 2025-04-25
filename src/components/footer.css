@@ -2,9 +2,9 @@ footer {
     height: 100%;
     border: 1px solid #D8D8D8;
     background: #FAFAFA;
-    margin-top:20px;
     display: flex;
     justify-content: space-between;
+    width:1469px;
 }
 .container-cartoon {
     display: flex;
