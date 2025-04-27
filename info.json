@@ -1,0 +1,28 @@
+{
+  "info": [
+    {
+      "name": "Maria",
+      "email": "maria@example.com",
+      "password": "123456789",
+      "id": "2c46"
+    },
+    {
+      "id": "d89c",
+      "name": "dfssdf",
+      "email": "sdgsdgsgsdgsdg",
+      "password": "sdgsgsgdgdfgdfg"
+    },
+    {
+      "id": "ddf5",
+      "name": "gdfgdfgdg",
+      "email": "gfdgdfgdfgdf",
+      "password": "fgfddfgdfgdg"
+    },
+    {
+      "id": "73bf",
+      "name": "gdgdfg",
+      "email": "ddfgdgdfgd@",
+      "password": "fgdfgdffgdfg"
+    }
+  ]
+}
