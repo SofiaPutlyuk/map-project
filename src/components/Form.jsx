@@ -32,7 +32,29 @@ class Form extends React.Component {
     const updateName = [...names, nameValue]
     const updateEmail = [...emails, emailValue]
     const updatePassword = [...passwords,passwordValue]
-    if(!names.includes(nameValue) && !emails.includes(emailValue) && !passwords.includes(passwordValue)){
+    if (names.length >= 10 || emails.length >= 10 || passwords.length >= 10) {
+        alert("Дані повинні мати 10 символів");
+    }   
+    if (names.includes(nameValue)) {
+        alert("Це ім'я вже існує.");
+        return;
+    }
+    if (emails.includes(emailValue)) {
+        alert("Цей email вже існує.");
+        return;
+    }
+    if(!emailValue.includes("@")){
+        alert("Емайл має містити @")
+        return;
+    }
+    if (passwords.includes(passwordValue)) {
+        alert("Цей пароль вже існує.");
+        return;
+    }
+    if (passwordValue.length < 8) {
+        alert("Пароль має бути не менше 8 символів.");
+        return;
+    }
         this.setState({
             names:updateName,
             emails:updateEmail,
@@ -53,10 +75,8 @@ class Form extends React.Component {
         localStorage.setItem("Name", JSON.stringify(updateName))
         localStorage.setItem("Email", JSON.stringify(updateEmail))
         localStorage.setItem("Password", JSON.stringify(updatePassword))
-    }else {
-        alert("Ці дані існують")
-    }
-  
+        alert("Регістрація успішна")
+    
     }
     render() {
         const {nameValue, emailValue,  passwordValue } = this.state
@@ -81,4 +101,5 @@ class Form extends React.Component {
         )
     }
 }
+
 export default Form;
