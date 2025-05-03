@@ -10,12 +10,13 @@ class Form extends React.Component {
         emails:JSON.parse(localStorage.getItem("Email")) || [],
         emailValue:"",
         passwords:JSON.parse(localStorage.getItem("Password")) || [],
-        passwordValue:""
+        passwordValue:"",
     }
     handleName = ({ target: { value } }) => {
         this.setState({
             nameValue: value
         })
+        this.props.onNameInput(value);
     }
     handleEmail = ({target :{value}}) => {
         this.setState({
@@ -35,6 +36,10 @@ class Form extends React.Component {
     if (names.length >= 10 || emails.length >= 10 || passwords.length >= 10) {
         alert("Дані повинні мати 10 символів");
     }   
+    if(!nameValue || !passwordValue || !emailValue){
+        alert("Заповніть поля")
+        return;
+    }
     if (names.includes(nameValue)) {
         alert("Це ім'я вже існує.");
         return;
@@ -79,7 +84,7 @@ class Form extends React.Component {
     
     }
     render() {
-        const {nameValue, emailValue,  passwordValue } = this.state
+        const {nameValue, emailValue,  passwordValue} = this.state
         return (
             <Fragment>
             <form >
@@ -95,8 +100,13 @@ class Form extends React.Component {
                     e.preventDefault();
                     this.handleAddInfo();
                 }} className='button-send'>Send message</button>
+                {!this.props.currentUser && (
+                    <p>Маєш вже акаунт ?
+                <span className="text-login" onClick={this.props.onShowModal}>  Login  </span>
+                </p>
+                )}
+                
             </form>
-          
             </Fragment>
         )
     }

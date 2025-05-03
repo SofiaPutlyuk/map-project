@@ -50,3 +50,6 @@ form {
         transform: rotate(360deg);
       }
   }
+  .text-login {
+    font-style: italic;
+  }
