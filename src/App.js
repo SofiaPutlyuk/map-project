@@ -10,7 +10,8 @@ import Modal from './components/Modal';
 class App extends React.Component {
   state = {
     currentUser: JSON.parse(localStorage.getItem("Currentuser")) || "",
-    showModal: false
+    showModal: false,
+    
   };
 
   handleLoginSuccess = () => {
@@ -29,11 +30,24 @@ class App extends React.Component {
     this.setState({ currentUser: name });
     localStorage.setItem("Currentuser", JSON.stringify(name));
   };
+  handleLogout = () => {
+    this.setState({ currentUser: "" });
+    localStorage.removeItem("Currentuser");
+    localStorage.removeItem("Name");
+    localStorage.removeItem("Email");
+    localStorage.removeItem("Password");
+  };
 
   render() {
+    const {currentUser} = this.state
     return (
       <Fragment>
-        <Header nameAccount={this.state.currentUser} />
+           {currentUser && (
+          <Header
+            nameAccount={currentUser}
+            cabinet={this.handleLogout}
+          />
+        )}
         {this.state.showModal && (
           <Modal
             show={this.state.showModal}

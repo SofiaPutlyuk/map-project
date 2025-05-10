@@ -49,6 +49,7 @@ fetch("http://localhost:3000/info",{
     localStorage.setItem("Logins",JSON.stringify(updateLoginInfo))
     localStorage.setItem("Currentuser",JSON.stringify(usernameValue))
     alert("Успішно")
+    this.props.onLoginSuccess();
     this.props.onClose()
    }else {
     alert("Заєструйтеся")

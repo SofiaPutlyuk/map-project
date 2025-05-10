@@ -1,28 +1,32 @@
 header {
-    width:1469px;
+    width: 1469px;
     height: 150px;
     background: linear-gradient(90deg, rgba(253, 248, 243, 1), rgba(255, 188, 112, 1));
     -webkit-background: linear-gradient(90deg, rgba(253, 248, 243, 1), rgba(255, 188, 112, 1));
     -moz-background: linear-gradient(90deg, rgba(253, 248, 243, 1), rgba(255, 188, 112, 1));
-    padding-top:30px;
+    padding-top: 30px;
 }
+
 li {
     list-style-type: none;
 }
+
 .logo {
     font-size: 2rem;
     font-weight: bold;
-    color: #2c3e50; 
+    color: #2c3e50;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 10px 20px;
 }
+
 .container-list {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
+
 .account-text {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
@@ -32,4 +36,26 @@ li {
     letter-spacing: 1px;
     font-weight: 500;
     text-align: center;
+}
+
+.btn-cabinet {
+    border: none;
+    border-radius: 15px;
+    width: 240px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ff6801;
+    background-image: linear-gradient(316deg, #ff6801 0%, #ffb347 74%);
+    font-size: 15px;
+    color:#e34234;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.icon-door {
+    width: 40px;
+    height: 40px;
 }
